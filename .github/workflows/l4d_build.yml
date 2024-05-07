@@ -28,7 +28,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - ubuntu-latest
+          - ubuntu-20.04
           - windows-latest
 
         mm_version:
@@ -38,7 +38,7 @@ jobs:
           - mm_version: "master"
             mm_branch: "master"
 
-          - os: ubuntu-latest
+          - os: ubuntu-20.04
             os_short: linux
 
           - os: windows-latest
