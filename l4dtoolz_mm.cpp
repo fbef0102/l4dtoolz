@@ -100,7 +100,7 @@ void l4dtoolz::OnChangeUnreserved ( IConVar *var, const char *pOldValue, float f
 	if(new_value != old_value) {
 		if(new_value == 1) {
 			write_signature(unreserved_ptr, unreserved_new);
-			engine->ServerCommand("sv_allow_lobby_connect_only 0\n");
+			g_pCVar->FindVar("sv_allow_lobby_connect_only")->SetValue(0);
 		} else {
 			write_signature(unreserved_ptr, unreserved_org);
 		}
