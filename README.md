@@ -11,7 +11,7 @@ Metamod plugin to unlock the max player limit on L4D and L4D2.
 * Write down cfg/server.cfg (Create it if file does not exist)
   ```
   // Max Human Players, free to modify value (1~31)
-  // How many human players can joins server
+  // How many human players can join server
   sv_maxplayers 18
 
   // Overrides the max players reported to prospective clients
