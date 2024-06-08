@@ -19,11 +19,11 @@ void* l4dtoolz::tmp_player = NULL;
 void* l4dtoolz::unreserved_ptr = NULL;
 void* l4dtoolz::lobby_match_ptr = NULL;
 
-ConVar sv_maxplayers("sv_maxplayers", "-1", 0, "Max Human Players", true, -1, true, 32, l4dtoolz::OnChangeMaxplayers);
+ConVar sv_maxplayers("sv_maxplayers", "-1", FCVAR_SPONLY|FCVAR_NOTIFY, "Max Human Players", true, -1, true, 32, l4dtoolz::OnChangeMaxplayers);
 #if SOURCE_ENGINE == SE_LEFT4DEAD
-ConVar sv_removehumanlimit("sv_removehumanlimit", "0", 0, "Remove Human limit reached kick", true, 0, true, 1, l4dtoolz::OnChangeRemovehumanlimit);
+ConVar sv_removehumanlimit("sv_removehumanlimit", "0", FCVAR_SPONLY|FCVAR_NOTIFY, "Remove Human limit reached kick", true, 0, true, 1, l4dtoolz::OnChangeRemovehumanlimit);
 #endif
-ConVar sv_force_unreserved("sv_force_unreserved", "0", 0, "Disallow lobby reservation cookie", true, 0, true, 1, l4dtoolz::OnChangeUnreserved);
+ConVar sv_force_unreserved("sv_force_unreserved", "0", FCVAR_SPONLY|FCVAR_NOTIFY, "Disallow lobby reservation cookie", true, 0, true, 1, l4dtoolz::OnChangeUnreserved);
 
 void l4dtoolz::OnChangeMaxplayers ( IConVar *var, const char *pOldValue, float flOldValue )
 {
