@@ -7,7 +7,7 @@ const char* matchmaking_dll[] = {"matchmaking_ds.so", "matchmaking.so", 0};
 
 //CBaseServer::GetMaxHumanPlayers(void)const
 //function is in engine.so
-const char* friends_lobby = "\x0F\x53\x83\xEC\x18\xE8\xC3\xC3\xC3\xC3\x81\xC3\xB9\xB8\x23\x00";
+const char* friends_lobby = "\x0F\x53\x83\xEC\x18\xE8\xC3\xC3\xC3\xC3\x81\xC3\x69\xB7\x23\x00";
 unsigned char friends_lobby_new[] = {0x06, 0x00, 0xB8, 0x3C, 0x00, 0x00, 0x00, 0xC3};
 void* friends_lobby_org = NULL;
 
@@ -43,7 +43,7 @@ void* players_org = NULL;
 
 //CBaseServer::SetReservationCookie(unsigned long long, char  const*, ...)
 //function in engine.so
-const char* unreserved = "\x15\x55\x57\x56\x53\x81\xEC\x3C\x01\x00\x00\xE8\xC3\xC3\xC3\xC3\x81\xC3\x33\x8E\x23\x00";
+const char* unreserved = "\x15\x55\x57\x56\x53\x81\xEC\x3C\x01\x00\x00\xE8\xC3\xC3\xC3\xC3\x81\xC3\xE3\x8C\x23\x00";
 const char* unreserved_new = "\x01\x00\xC3";
 void* unreserved_org = NULL;
 
